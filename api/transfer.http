@@ -1,6 +1,7 @@
 ### create transfer
 POST http://localhost:8080/transfers
 Content-Type: application/json
+Authorization: Bearer {{$dotenv HTTP_ACCESS_TOKEN}}
 
 {
   "from_account_id": 1,
@@ -12,6 +13,7 @@ Content-Type: application/json
 ### fail to transfer because invalid currency
 POST http://localhost:8080/transfers
 Content-Type: application/json
+Authorization: Bearer {{$dotenv HTTP_ACCESS_TOKEN}}
 
 {
   "from_account_id": 1,

@@ -1,0 +1,17 @@
+### create account
+POST http://localhost:8080/accounts
+Content-Type: application/json
+Authorization: Bearer {{$dotenv HTTP_ACCESS_TOKEN}}
+
+{
+  "owner": "John Doe",
+  "currency": "EUR"
+}
+
+### get account
+GET http://localhost:8080/accounts/120
+Authorization: Bearer {{$dotenv HTTP_ACCESS_TOKEN}}
+
+### list accounts
+GET http://localhost:8080/accounts?page_id=1&page_size=5
+Authorization: Bearer {{$dotenv HTTP_ACCESS_TOKEN}}
